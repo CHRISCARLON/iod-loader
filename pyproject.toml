@@ -1,5 +1,5 @@
 [project]
-name = "imd-loader"
+name = "IMDLoader"
 version = "0.1.0"
 description = "Download and process English Indices of Deprivation data files"
 readme = "README.md"
@@ -29,6 +29,9 @@ dependencies = [
 Homepage = "https://github.com/yourusername/imd-2025-loader"
 Repository = "https://github.com/yourusername/imd-2025-loader"
 Issues = "https://github.com/yourusername/imd-2025-loader/issues"
+
+[project.scripts]
+imd = "ImdLoader.cli:main"
 
 [build-system]
 requires = ["hatchling"]

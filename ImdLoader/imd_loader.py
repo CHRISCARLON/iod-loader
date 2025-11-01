@@ -1,5 +1,5 @@
 """
-IMD Loader - Interface for loading IMD  data into a local DuckDB.
+IMD Loader - Python interface for loading IMD  data into a local DuckDB.
 
 Usage:
     from ImdLoader import imd_data_loader
@@ -339,10 +339,10 @@ def list_tables(db_path: Path = DEFAULT_DB_PATH) -> List[str]:
     """List all tables in the database."""
     con = duckdb.connect(str(db_path))
     query = """
-        SELECT schema_name || '.' || table_name as full_name
+        SELECT table_schema || '.' || table_name as full_name
         FROM information_schema.tables
         WHERE table_schema NOT IN ('information_schema', 'pg_catalog')
-        ORDER BY schema_name, table_name
+        ORDER BY table_schema, table_name
     """
     tables = con.execute(query).fetchall()
     con.close()
