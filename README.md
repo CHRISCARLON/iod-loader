@@ -21,12 +21,10 @@ uv add imd-loader
 ### Simple Usage
 
 ```python
-from ImdLoader import imd_data_loader
+from ImdLoader import load_with_progress
 
-# Load all IMD 2025 data
-for status in imd_data_loader():
-    if status['stage'] == 'complete':
-        print(f"Loaded {status['total_tables']} tables!")
+if __name__ == "__main__":
+    load_with_progress()
 ```
 
 ## Database Structure
