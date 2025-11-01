@@ -2,6 +2,8 @@
 
 A simple Python package for downloading and loading the latest English Indices of Deprivation 2025 data into DuckDB.
 
+Source -> [Here](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025)
+
 ## Installation
 
 ```bash
@@ -36,8 +38,6 @@ The loader creates a DuckDB database with the following structure:
 - **Notes sheets**: Automatically skipped
 
 ## Query Data
-
-e.g.
 
 ```sql
 SELECT *
