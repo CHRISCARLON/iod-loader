@@ -21,7 +21,7 @@ uv add imd-loader
 ```python
 from ImdLoader import imd_data_loader
 
-# Load all IoD 2025 data
+# Load all IMD 2025 data
 for status in imd_data_loader():
     if status['stage'] == 'complete':
         print(f"Loaded {status['total_tables']} tables!")
